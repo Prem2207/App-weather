@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.App {
+  min-height: 100vh;
+  background-image: url(./assets/imagen-de-fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.card {
+  margin: 1.5rem 1.5rem;
+  width: 450px;
+  height: 450px;
+  background-color: rgb(240, 237, 237, 0.5);
+
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px black;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  grid-template-areas:
+      "title title title  title "
+      "main main description description "
+      "button button button button"
+  ;
+  gap: 1rem;
+
+
+
+
+}
+
+h1,
+span,
+i,
+h3 {
+  color: rgb(52, 52, 251);
+}
+
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  grid-area: title;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-main {
+  grid-area: main;
+  margin-left: 20px;
+}
+
+.container-description {
+  grid-area: description;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding-bottom: 4rem;
+
+
+}
+
+.container-button {
+  grid-area: button;
+
+
+}
+
+button {
+  background-color: rgb(52, 52, 251);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lds-ring {
+display: inline-block;
+position: relative;
+width: 80px;
+height: 80px;
+}
+.lds-ring div {
+box-sizing: border-box;
+display: block;
+position: absolute;
+width: 64px;
+height: 64px;
+margin: 8px;
+border: 8px solid #fff;
+border-radius: 50%;
+animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
+
